@@ -1,9 +1,8 @@
 import cv2
 
-faceCascade = cv2.CascadeClassifier('C:\\Users\\anuj5\AppData\Local\Programs\Python\Python36\Lib\site-packages\cv2'
-                                    '\data\haarcascade_frontalface_alt2.xml')
+faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-img = cv2.imread('images/image1.jpg')
+img = cv2.imread('images.jpg')
 gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 faces = faceCascade.detectMultiScale(gray_img, scaleFactor=1.05, minNeighbors=5)
