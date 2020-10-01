@@ -1,6 +1,6 @@
 import cv2
 
-# Load the cascade
+# Load  to the cascade
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # To capture video from webcam. 
@@ -9,10 +9,10 @@ cap = cv2.VideoCapture(0)
 # cap = cv2.VideoCapture('filename.mp4')
 
 while True:
-    # Read the frame
+    # Read  tp the frame
     _, img = cap.read()
 
-    # Convert to grayscale
+    # Convert to the grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Detect the faces
@@ -23,14 +23,14 @@ while True:
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
 
-    # Display
+    # Display the outputs 
     cv2.imshow('img', img)
 
-    # Stop if escape key is pressed
+    # to Stop if escape key is pressed 
     k = cv2.waitKey(30) & 0xff
     if k==27:
         break
         
-# Release 
+# Release  
 cap.release()
 cv2.destroyAllWindows()
